@@ -2,23 +2,24 @@
 
 # TOR Setup Script
 # Author: Nick Busey
+# Editor : Arif Stya Wira L
 #
 # This file is meant to get SSH access via Tor to an Ubuntu server in one command.
 #
-# Quick Usage (as root): $ bash <(curl -s https://gitlab.com/grownetics/devops/raw/master/tor_ssh.sh)
+# Quick Usage (as root): $ bash <(curl -s https://raw.githubusercontent.com/arifstyawira/tor_ssh/master/tor_ssh.sh)
 #
 # Usage for the paranoid:
-# $ wget https://gitlab.com/grownetics/devops/raw/master/tor_ssh.sh
+# $ wget https://raw.githubusercontent.com/arifstyawira/tor_ssh/master/tor_ssh.sh
 # $ less tor_ssh.sh # Verify the script contains the same script as you see below
 # $ sudo bash tor_ssh.sh
 #
 # Client Config Example
 #
 # In order to connect to the hostnames output by this file, you should have the TOR browser running
-# and your ~/.ssh/config should contain the following 2 lines:
-#
+# and your MAC Book : ~/.ssh/config should contain the following 2 lines:
+# 
 #   Host *.onion
-#       ProxyCommand /usr/bin/nc -xlocalhost:9150 -X5 %h %p
+#   ProxyCommand /usr/bin/nc -xlocalhost:9150 -X5 %h %p
 #
 # Now once you get a hostname back from the script (e.g.: tmxybgr6e7kpenoq.onion)
 # you can connect to it like a normal host.
